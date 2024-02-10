@@ -7,10 +7,12 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
+    hot: true,
+    watchFiles: ["src/**/*.html"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Test",
+      title: "Awesome Restaurant",
       template: "./src/template.html",
     }),
   ],
@@ -26,6 +28,7 @@ module.exports = {
         use: [
           "style-loader", // Injects CSS into the DOM
           "css-loader", // Turns CSS into commonjs
+          "postcss-loader", // Processes CSS with PostCSS
           "sass-loader", // Turns SCSS into CSS
         ],
       },
