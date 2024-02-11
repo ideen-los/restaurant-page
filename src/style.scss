@@ -18,9 +18,9 @@ header {
   }
 }
 
-/* .active {
-  @apply border-yellow-700;
-} */
+.active {
+  @apply text-gray-800;
+}
 
 img {
   max-width: 100%;
