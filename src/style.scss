@@ -58,9 +58,6 @@ iframe {
   @media (max-width: 999px) {
     bottom: 80%;
   }
-  @media (max-width: 500px) {
-    background: linear-gradient(to bottom, $menu-color 75%, transparent 75%);
-  }
 
   .bg {
     background-color: $menu-color;
