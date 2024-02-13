@@ -20,19 +20,22 @@ function changePage(showPage) {
 
 // Add event listeners to the nav buttons
 function activateButtons() {
-  buttons[0].addEventListener("click", function () {
+  buttons[0].addEventListener("click", function (e) {
+    e.preventDefault();
     if (currentPage != "homepage") {
       changePage(showHomepage);
       currentPage = "homepage";
     }
   });
-  buttons[1].addEventListener("click", function () {
+  buttons[1].addEventListener("click", function (e) {
+    e.preventDefault();
     if (currentPage != "menu") {
       changePage(showMenu);
       currentPage = "menu";
     }
   });
-  buttons[2].addEventListener("click", function () {
+  buttons[2].addEventListener("click", function (e) {
+    e.preventDefault();
     if (currentPage != "about") {
       changePage(showAbout);
       currentPage = "about";
