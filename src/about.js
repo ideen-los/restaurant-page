@@ -69,7 +69,7 @@ function about() {
   about.appendChild(tel);
 
   const email = document.createElement("a");
-  email.classList.add("self-start", "border-b", "border-gray-800");
+  email.classList.add("self-start", "border-b", "border-fuchsia-400");
   email.href = "mailto:hello@bigburgermadness.com";
   email.textContent = "hello@bigburgermadness.com";
   about.appendChild(email);
