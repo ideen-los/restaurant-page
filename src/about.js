@@ -43,7 +43,14 @@ function about() {
   aboutContainer.appendChild(about);
 
   const title = document.createElement("h1");
-  title.classList.add("text-xl", "font-bold", "uppercase", "mb-6");
+  title.classList.add(
+    "text-xl",
+    "font-bold",
+    "uppercase",
+    "mb-6",
+    "hidden",
+    "sm:block"
+  );
   title.textContent = "Grab your burger";
   about.appendChild(title);
 
