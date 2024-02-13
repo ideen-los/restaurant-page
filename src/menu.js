@@ -23,6 +23,8 @@ function generateFoodItemHTML(foodItems) {
   container.classList.add(
     "w-full",
     "max-w-6xl",
+    "pt-4",
+    "md:pt-16",
     "pb-10",
     "px-10",
     "mx-auto",
