@@ -44,9 +44,22 @@ iframe {
   width: 100vw;
   height: 164vh;
   transition: all 0.6s ease;
-  background: linear-gradient(to bottom, $menu-color 60%, transparent 60%);
-  /* transition-delay: 0.15s; */
+  background: linear-gradient(to bottom, $menu-color 65%, transparent 65%);
   z-index: 1;
+
+  @media (max-width: 1600px) {
+    background: linear-gradient(to bottom, $menu-color 75%, transparent 75%);
+  }
+  @media (max-width: 1370px) {
+    background: linear-gradient(to bottom, $menu-color 80%, transparent 80%);
+    bottom: 70%;
+  }
+  @media (max-width: 999px) {
+    bottom: 80%;
+  }
+  @media (max-width: 500px) {
+    background: linear-gradient(to bottom, $menu-color 75%, transparent 75%);
+  }
 
   .bg {
     background-color: $menu-color;
@@ -64,6 +77,13 @@ iframe {
 
   &.is-transitioning {
     transform: translate(0, 66%);
+
+    @media (max-width: 999px) {
+      transform: translate(0, 70%);
+    }
+    @media (max-width: 500px) {
+      transform: translate(0, 75%);
+    }
 
     .sauce {
       transform: scaleY(1);

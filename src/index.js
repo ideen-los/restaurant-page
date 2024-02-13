@@ -1,7 +1,7 @@
 import "./style.scss";
 import homepage from "./homepage";
-import menu from "./menu";
 import about from "./about";
+import foodItemsHTML from "./menu.js";
 
 const buttons = document.querySelectorAll("a");
 const content = document.querySelector("#content");
@@ -19,18 +19,26 @@ function changePage(showPage) {
 }
 
 // Add event listeners to the nav buttons
-buttons[0].addEventListener("click", function () {
-  if (currentPage != "homepage") {
-    changePage(showHomepage);
-    currentPage = "homepage";
-  }
-});
-buttons[2].addEventListener("click", function () {
-  if (currentPage != "about") {
-    changePage(showAbout);
-    currentPage = "about";
-  }
-});
+function activateButtons() {
+  buttons[0].addEventListener("click", function () {
+    if (currentPage != "homepage") {
+      changePage(showHomepage);
+      currentPage = "homepage";
+    }
+  });
+  buttons[1].addEventListener("click", function () {
+    if (currentPage != "menu") {
+      changePage(showMenu);
+      currentPage = "menu";
+    }
+  });
+  buttons[2].addEventListener("click", function () {
+    if (currentPage != "about") {
+      changePage(showAbout);
+      currentPage = "about";
+    }
+  });
+}
 
 // Add active class
 buttons.forEach((button) => {
@@ -45,24 +53,20 @@ buttons.forEach((button) => {
 
 // The homepage
 function showHomepage() {
-  content.appendChild(homepage().headline);
-  content.appendChild(homepage().para);
-  content.appendChild(homepage().img1);
+  content.appendChild(homepage().container);
 }
 
 // The menu page
 function showMenu() {
-  content.appendChild(homepage().headline);
-  content.appendChild(homepage().para);
-  content.appendChild(homepage().img);
+  content.appendChild(foodItemsHTML);
 }
 
 // The about page
 function showAbout() {
-  content.appendChild(about().headline);
-  content.appendChild(about().mapImg);
-  content.appendChild(about().para1);
+  content.appendChild(about().iframeContainer);
+  content.appendChild(about().aboutContainer);
 }
 
 // Show the homepage when the page is loaded
 showHomepage();
+activateButtons();
