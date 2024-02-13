@@ -20,7 +20,14 @@ class FoodItem {
 function generateFoodItemHTML(foodItems) {
   // Container for all food items
   const container = document.createElement("div");
-  container.classList.add("w-full", "max-w-6xl", "p-10", "mx-auto", "relative");
+  container.classList.add(
+    "w-full",
+    "max-w-6xl",
+    "pb-10",
+    "px-10",
+    "mx-auto",
+    "relative"
+  );
 
   foodItems.forEach((item) => {
     // Container for a single food item
