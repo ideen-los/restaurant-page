@@ -26,8 +26,7 @@ function generateFoodItemHTML(foodItems) {
     "pb-10",
     "px-10",
     "mx-auto",
-    "relative",
-    "overflow-x-hidden"
+    "relative"
   );
 
   foodItems.forEach((item) => {
